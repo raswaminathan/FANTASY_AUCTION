@@ -3,7 +3,7 @@ package football;
 public class RBPlayer extends Player {
 
 	// projected baseline = 164
-	public static final double BASELINE_RB_SCORE = 151;// 138.5;
+	public static final double BASELINE_RB_SCORE = 138.5;//151;// 138.5;
 	public static final double LAST_RB_DRAFTED_BASELINE = 65;
 	public static final double BASELINE_RUSH_TDS = 6 * (1-.34);
 	public static final double BASELINE_REC_TDS = 1 * (1-.34);

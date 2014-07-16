@@ -81,11 +81,12 @@ public abstract class Player implements Comparable {
 	}
 
 	public abstract double getPPGRelativeToNoTDsBaseline(boolean isLastPlayerBaseline); 
+	
 	public int compareTo(Object obj) {
 		Player other = (Player) obj;
-		if (this.totalPoints > other.totalPoints)
+		if (this.pointsRelativeToBaseline > other.pointsRelativeToBaseline)
 			return -1;
-		if (this.totalPoints == other.totalPoints)
+		if (this.pointsRelativeToBaseline == other.pointsRelativeToBaseline)
 			return 0;
 		else
 			return 1;

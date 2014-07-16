@@ -3,7 +3,7 @@ package football;
 public class TEPlayer extends Player {
 
 	//projected baseline = 103;
-	public static final double BASELINE_TE_SCORE = 100;//95.1;
+	public static final double BASELINE_TE_SCORE = 95.1;//100;//95.1;
 	public static final double LAST_TE_DRAFTED_BASELINE = 86;
 	public static final double BASELINE_TDS = 5.5;
 	public static final double POINTS_WITHOUT_TDS_BASELINE_TE = BASELINE_TE_SCORE

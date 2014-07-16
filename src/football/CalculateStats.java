@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class CalculateStats {
 
-	private ResourceBundle myResources;
+	private static ResourceBundle myResources;
 	private static final String PLAYER_RESOURCES_PACKAGE = "playerresources.";
 
 	@SuppressWarnings("unchecked")
@@ -161,7 +161,7 @@ public class CalculateStats {
 		double baseLineWeekB = 2 * RBPlayer.BASELINE_RB_SCORE / 16 + 2
 				* WRPlayer.BASELINE_WR_SCORE / 16 + TEPlayer.BASELINE_TE_SCORE
 				/ 16 + QBPlayer.BASELINE_QB_SCORE / 16 + 141 / 16 + 110 / 16
-				+ 125.6 / 16;
+				+ 125.6 / 16; //+ 115/16;
 
 		double baseLineWeekNoTDs = 2 * RBPlayer.POINTS_WITHOUT_TDS_BASELINE_RB
 				/ 16 + 2 * WRPlayer.POINTS_WITHOUT_TDS_BASELINE_WR / 16
@@ -170,7 +170,7 @@ public class CalculateStats {
 				/ 16 + (125.6 - 6 * 6) / 16;
 
 		double conversionFactor = 1;
-		double VBDWeek = 100 - baseLineWeekB;
+		double VBDWeek = 102 - baseLineWeekB;
 		System.out.println("BASELINE WEEK:  " + baseLineWeekB);
 		System.out.println("VBD WEEK:  " + VBDWeek + "\n");
 		for (int i = 1; i < 60; i++) {
@@ -288,10 +288,10 @@ public class CalculateStats {
 		// parseQBProperties();
 	}
 
-	public List<TEPlayer> parseTEProperties() {
+	public static List<Player> parseTEProperties() {
 		myResources = ResourceBundle.getBundle(PLAYER_RESOURCES_PACKAGE
 				+ "TEplayers");
-		List<TEPlayer> tePlayers = new ArrayList<TEPlayer>();
+		List<Player> tePlayers = new ArrayList<Player>();
 		for (Object obj : myResources.keySet()) {
 			String[] playerParts = myResources.getString((String) obj).split(
 					",");
@@ -308,10 +308,10 @@ public class CalculateStats {
 		return tePlayers;
 	}
 
-	public List<WRPlayer> parseWRProperties() {
+	public static List<Player> parseWRProperties() {
 		myResources = ResourceBundle.getBundle(PLAYER_RESOURCES_PACKAGE
 				+ "WRplayers");
-		List<WRPlayer> wrPlayers = new ArrayList<WRPlayer>();
+		List<Player> wrPlayers = new ArrayList<Player>();
 		for (Object obj : myResources.keySet()) {
 			String[] playerParts = myResources.getString((String) obj).split(
 					",");
@@ -330,10 +330,10 @@ public class CalculateStats {
 		return wrPlayers;
 	}
 
-	public List<RBPlayer> parseRBProperties() {
+	public static List<Player> parseRBProperties() {
 		myResources = ResourceBundle.getBundle(PLAYER_RESOURCES_PACKAGE
 				+ "RBplayers");
-		List<RBPlayer> rbPlayers = new ArrayList<RBPlayer>();
+		List<Player> rbPlayers = new ArrayList<Player>();
 		for (Object obj : myResources.keySet()) {
 			String[] playerParts = myResources.getString((String) obj).split(
 					",");
@@ -352,10 +352,10 @@ public class CalculateStats {
 		return rbPlayers;
 	}
 
-	public List<QBPlayer> parseQBProperties() {
+	public static List<Player> parseQBProperties() {
 		myResources = ResourceBundle.getBundle(PLAYER_RESOURCES_PACKAGE
 				+ "QBplayers");
-		List<QBPlayer> qbPlayers = new ArrayList<QBPlayer>();
+		List<Player> qbPlayers = new ArrayList<Player>();
 		for (Object obj : myResources.keySet()) {
 			String[] playerParts = myResources.getString((String) obj).split(
 					",");
