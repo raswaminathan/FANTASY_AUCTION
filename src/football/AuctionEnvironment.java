@@ -220,12 +220,14 @@ public class AuctionEnvironment {
 			/*
 			 * System.out.println("VBDRA " + p + "  " + t.getMaxBidForPlayer(p)
 			 * + "  " + p.getPPGRelativeToBaseline());
-			 * System.out.println("VBDRN " + p + "  " +
+			 System.out.println("VBDRN " + p + "  " +
 			 * tt.getMaxBidForPlayer(p)); System.out.println("DEFAULT " + p +
 			 * "  " + ttt.getMaxBidForPlayer(p));
 			 * System.out.println("DIFFERENCE:  " + (t.getMaxBidForPlayer(p) -
 			 * ttt.getMaxBidForPlayer(p)));
 			 */
+			System.out.println("VBDRN " + p + "  " +
+					  tt.getMaxBidForPlayer(p));
 			int difference = (t.getMaxBidForPlayer(p) - ttt
 					.getMaxBidForPlayer(p));
 			if (!playerToDifferenceMap.containsKey(difference))
