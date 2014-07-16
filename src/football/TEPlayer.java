@@ -12,8 +12,8 @@ public class TEPlayer extends Player {
 	public static final double POINTS_WITHOUT_TDS_LAST_TE = LAST_TE_DRAFTED_BASELINE
 			- LAST_BASELINE_TDS * 6;
 
-	public TEPlayer(String name, int dollarValue, int recYards, int recTDs,
-			int turnovers) {
+	public TEPlayer(String name, int dollarValue, double recYards, double recTDs,
+			double turnovers) {
 		super(name, dollarValue, 0, 0, 0, 0, recYards, recTDs, turnovers);
 		pointsRelativeToBaseline = (this.totalPoints - BASELINE_TE_SCORE);
 		ppgRelativeToBaseline = pointsRelativeToBaseline / 16;

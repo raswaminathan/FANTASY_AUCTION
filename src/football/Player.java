@@ -14,22 +14,22 @@ public abstract class Player implements Comparable {
 	protected double ppgRelativeToLastPlayerBaseline;
 	protected double pointsRelativeToBaseline;
 	protected double pointsWithoutTDsBaseline = 0;
-	private int passYards;
-	private int passTDs;
-	private int rushYards;
-	private int rushTDs;
-	private int recYards;
-	private int recTDs;
-	private int turnovers;
-	protected int totalPassTDs;
-	protected int totalRushRecTDs;
+	private double passYards;
+	private double passTDs;
+	private double rushYards;
+	private double rushTDs;
+	private double recYards;
+	private double recTDs;
+	private double turnovers;
+	protected double totalPassTDs;
+	protected double totalRushRecTDs;
 	protected double totalPoints;
 	protected double pointsPerGame;
 	protected double pointsPerDollar;
 	protected double pointsPerGamePerDollar;
 
-	public Player(String name, int dollarValue, int passYards, int passTDs,
-			int rushYards, int rushTDs, int recYards, int recTDs, int turnovers) {
+	public Player(String name, int dollarValue, double passYards, double passTDs,
+			double rushYards, double rushTDs, double recYards, double recTDs, double turnovers) {
 		this.name = name;
 		this.dollarValue = dollarValue;
 		this.passYards = passYards;

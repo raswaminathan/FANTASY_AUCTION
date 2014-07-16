@@ -14,8 +14,8 @@ public class QBPlayer extends Player {
 	public static final double POINTS_WITHOUT_TDS_LAST_QB = LAST_QB_DRAFTED_BASELINE
 			- LAST_BASELINE_PASS_TDS * 4 - LAST_BASELINE_RUSH_TDS * 6;
 
-	public QBPlayer(String name, int dollarValue, int passYards, int passTDs,
-			int rushYards, int rushTDs, int turnovers) {
+	public QBPlayer(String name, int dollarValue, double passYards, double passTDs,
+			double rushYards, double rushTDs, double turnovers) {
 		super(name, dollarValue, passYards, passTDs, rushYards, rushTDs, 0, 0,
 				turnovers);
 		pointsRelativeToBaseline = (this.totalPoints - BASELINE_QB_SCORE);

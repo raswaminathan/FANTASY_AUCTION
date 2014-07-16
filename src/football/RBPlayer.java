@@ -14,8 +14,8 @@ public class RBPlayer extends Player {
 	public static final double POINTS_WITHOUT_TDS_LAST_RB = LAST_RB_DRAFTED_BASELINE
 			- LAST_BASELINE_RUSH_TDS * 6 - LAST_BASELINE_REC_TDS * 6;
 
-	public RBPlayer(String name, int dollarValue, int rushYards, int rushTDs,
-			int recYards, int recTDs, int turnovers) {
+	public RBPlayer(String name, int dollarValue, double rushYards, double rushTDs,
+			double recYards, double recTDs, double turnovers) {
 		super(name, dollarValue, 0, 0, rushYards, rushTDs, recYards, recTDs,
 				turnovers);
 		pointsRelativeToBaseline = (this.totalPoints - BASELINE_RB_SCORE);
